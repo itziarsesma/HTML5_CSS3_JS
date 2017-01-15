@@ -1,0 +1,430 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%
+}
+
+body {
+	margin: 0px;
+	font-family: 'Overpass';
+    height: 100%
+}
+
+h1, p {
+	margin: 0px;
+}
+
+@font-face {
+	font-family: Overpass;
+	src: url(../fonts/Overpass-Regular.ttf);
+}
+
+@font-face {
+	font-family: Marck Script;
+	src: url(../fonts/MarckScript-Regular.ttf);
+}
+
+.main-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	min-height: 100%;
+}
+
+.header > .header-image {
+	width: 100%;
+	background-image: url("../images/principal.jpeg");
+	height: 100vh;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.header > .header-title {
+	position: absolute;
+	top: 35%;
+	width: 100%;
+	color: white;
+	text-align: center;
+	font-size: 150px;
+	text-shadow: 2px 2px #3B3E33;
+	font-family: 'Marck Script', cursive;
+}
+
+.header > .header-text {
+	position: absolute;
+	top:65%;
+	color: white;
+	width: 100%;
+	text-align: center;
+	font-size: 56px;
+	font-family: 'Marck Script', cursive;
+	opacity: 0;
+	animation: header-text-animation 3s forwards;
+	animation-delay: 0.5s;
+}
+
+.header-navbar {
+	position: relative;
+	top: 0%;
+	background-color: #191b14;
+	height: 62px;
+}
+
+.header-navbar-fixed {
+	position: fixed;
+	top: 0%;
+	background-color: #191b14;
+	height: 62px;
+	width: 100%;
+}
+
+.navbar > .navbar-list {
+    list-style-type: none;
+    margin: 0;
+    float: right;
+    font-size: 0;
+}
+
+.navbar > .navbar-list > .navbar-item {
+    display: inline-block;
+    font-size: 16px;
+}
+
+.navbar > .navbar-list > .navbar-item.active > .navbar-link{
+    color: #F7F7F7;
+    background-color: #3B3E33;
+}
+
+.navbar > .navbar-list > .navbar-item > .navbar-link:hover{
+    color: #F7F7F7;
+    background-color: #3B3E33;
+}
+
+.navbar > .navbar-list > .navbar-item > .navbar-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+}
+
+.main-container > .section {
+	margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+
+.main-container > .section-odd {
+	background-color: #9aa582;
+}
+
+.main-container > .section-pair {
+	background-color: #3B3E33;
+	color: white;
+}
+
+.section > .section-container > .section-odd-title {
+	text-align: center;
+	color: #3B3E33;
+	font-family: 'Marck Script', cursive;
+	position: relative;
+	visibility: hidden;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.section > .section-container > .section-pair-title {
+	text-align: center;
+	color: white;
+	font-family: 'Marck Script', cursive;
+	position: relative;
+	visibility: hidden;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.section > .section-container > .section-title-animation {
+	visibility: visible;
+	animation: title-move 1.5s linear;
+}
+
+.section-container > .quien-soy-div > .quien-soy-column img {
+	max-width: 100%;
+	width: 	250px;
+	border-radius: 10%;
+	margin-left: 30%;
+}
+
+.section-container > .quien-soy-div {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.section-container > .quien-soy-div > .quien-soy-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 1;
+	padding: 20px;
+	text-align: justify;
+}
+
+.header-col-one {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	flex: 1;
+	padding-right: 20px;
+}
+
+.header-col-two {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	flex: 1;
+	padding-left: 20px;
+}
+
+.header-text {
+	font-weight: normal;
+    font-size: 40px;
+}
+
+.section-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	min-height: 100%;
+}
+
+/*Estudios*/
+.article-studies {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.studies-culumn-one {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	flex: 1;
+	padding: 20px;
+}
+
+.studies-culumn-two {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 3;
+	padding: 20px;
+}
+
+.studies-date {
+	font-size: 20px;
+	color: #67CE5D;
+}
+
+.studies-header {
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.studies-text {
+	color: #67CE5D;
+}
+
+/*Experiencia*/
+.article-experience {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.experience-culumn-one {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 2;
+	padding: 20px;
+	text-align: justify;
+}
+
+.experience-culumn-two {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	padding: 20px;
+}
+
+.experience-date {
+	font-size: 20px;
+	color: #3B3E33;
+}
+
+.experience-company {
+	color: #017906;
+	text-align: center;
+}
+
+.experience-header {
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+	color: #017906;
+	width: 100%;
+}
+
+.experience-subtext {
+	color: #017906;
+}
+
+/* Sobre mi */
+
+.sobre-mi-p {
+	padding: 20px;
+	text-align: justify;
+}
+
+.video-container {
+	padding: 20px;
+	text-align: center;
+}
+
+/* Pie de página */
+
+.footer {
+	width: 100%;
+	background-color: #191b14;
+	height: 50px;
+	color: #F7F7F7;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Marck Script', cursive;
+	font-size: 25px;
+}
+
+/* Contacto */
+.form-contact {
+	width: 100%;
+}
+
+.contact-container {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.contact-culumn-one {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 1;
+	padding: 20px;
+}
+
+.contact-culumn-two {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	padding: 20px;
+	
+}
+
+input[type=text], input[type=email], textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    font-family: 'Overpass';
+    resize: none;
+}
+
+.contact-select {
+	margin-bottom: 15px;
+}
+
+.contact-select-options {
+	margin-left: 25px;
+	margin-bottom: 15px;
+}
+
+.select-option {
+	width: 100%;
+}
+
+.conocido_otros_input_div_hidden {
+	visibility: hidden;
+	height: 0px;
+}
+
+.conocido_otros_input_div_visible {
+	visibility: visible;
+	height: auto;
+}
+
+.form-contact-input {
+	background-color: #3B3E33;
+    border: none;
+}
+
+button {
+	background-color: transparent;
+    border: 2px solid #3B3E33;
+    color: #3B3E33;
+    padding: 12px 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #3B3E33;
+    color: white;
+}
+
+.ultimos-contactos-title {
+	font-size: 20px;
+    margin-bottom: 20px;
+    color: #017906;
+}
+
+.ultimos-contactos {
+	width: 100%; 
+	height: 540px; 
+	overflow-y: auto;
+}
+
+@keyframes header-text-animation {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes title-move {
+    from {
+    	left: -600px;
+    	opacity: 0.3;
+    }
+    to {
+    	left: 0px;
+    	opacity: 1;
+    }
+}
